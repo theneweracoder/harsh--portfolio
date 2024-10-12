@@ -830,7 +830,7 @@ body.offcanvas .colorlib-nav-toggle {
 	position: absolute;
 	display: block;
 	width: 4px;
-	background: #f9bf3f;
+	background: #000000;
 	top: 20px;
 	bottom: 20px;
 	margin-left: 29px;
