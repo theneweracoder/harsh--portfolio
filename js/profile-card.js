@@ -6,9 +6,9 @@ const cloudSkills = [
     { name: "Docker" },
     { name: "AWS" },
     { name: "Azure" },
-  ];
+];
 
-  const frameworkSkills = [
+const frameworkSkills = [
     { name: "AWS" },
     { name: "Azure" },
     { name: "GCP" },
@@ -16,9 +16,9 @@ const cloudSkills = [
     { name: "Docker" },
     { name: "AWS" },
     { name: "Azure" },
-  ];
+];
 
-  const languagesSkills = [
+const languagesSkills = [
     { name: "AWS" },
     { name: "Azure" },
     { name: "GCP" },
@@ -26,9 +26,9 @@ const cloudSkills = [
     { name: "Docker" },
     { name: "AWS" },
     { name: "Azure" },
-  ];
+];
 
-  const databasesSkills = [
+const databasesSkills = [
     { name: "AWS" },
     { name: "Azure" },
     { name: "GCP" },
@@ -36,13 +36,13 @@ const cloudSkills = [
     { name: "Docker" },
     { name: "AWS" },
     { name: "Azure" },
-  ];
+];
 
 window.addEventListener("DOMContentLoaded", async function () {
     async function get(url) {
         const resp = await fetch(url);
         return resp.json();
-    }   
+    }
 
     const alignments = ['flex-start', 'center', 'flex-end'];
 
@@ -55,32 +55,47 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.padding = '20px';
         el.style.backgroundColor = '#f9bf3f';
         el.style.borderRadius = '10px';
-      
+
+        // Create and append the heading (e.g., for Cloud)
+        const heading = document.createElement("h3");
+        heading.textContent = "Cloud";
+        heading.style.position = 'absolute';
+        heading.style.top = '10px';
+        heading.style.left = '10px';
+        heading.style.margin = '0';
+        heading.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+        heading.style.fontSize = '18px';
+        heading.style.color = '#24292e'; // Dark color for contrast
+        el.appendChild(heading);
+
+        // Add padding-top to the container so that skills don't overlap the heading
+        el.style.paddingTop = '40px';
+
         cloudSkills.forEach(skill => {
-          // Create the skill pill element
-          const pill = document.createElement("div");
-      
-          // Randomly assign alignment (top, center, bottom)
-          const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
-      
-          // Set the styles for the pill
-          pill.textContent = skill.name;
-          pill.style.display = 'inline-block';
-          pill.style.padding = '10px 20px';
-          pill.style.backgroundColor = '#3498db';
-          pill.style.color = 'white';
-          pill.style.borderRadius = '30px';
-          pill.style.fontSize = '14px';
-          pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
-          pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-          pill.style.alignSelf = randomAlignment;  // Random alignment
-      
-          // Append the pill to the container
-          el.appendChild(pill);
-        });
-      });
+            // Create the skill pill element
+            const pill = document.createElement("div");
 
-      document.querySelectorAll(".langugages-card").forEach(function (el) {
+            // Randomly assign alignment (top, center, bottom)
+            const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
+
+            // Set the styles for the pill
+            pill.textContent = skill.name;
+            pill.style.display = 'inline-block';
+            pill.style.padding = '10px 20px';
+            pill.style.backgroundColor = '#3498db';
+            pill.style.color = 'white';
+            pill.style.borderRadius = '30px';
+            pill.style.fontSize = '14px';
+            pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+            pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            pill.style.alignSelf = randomAlignment;  // Random alignment
+
+            // Append the pill to the container
+            el.appendChild(pill);
+        });
+    });
+
+    document.querySelectorAll(".langugages-card").forEach(function (el) {
         // Set the styles for the container (cloud-card)
         el.style.display = 'flex';
         el.style.flexWrap = 'wrap';
@@ -89,32 +104,32 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.padding = '20px';
         el.style.backgroundColor = '#f9bf3f';
         el.style.borderRadius = '10px';
-      
+
         languagesSkills.forEach(skill => {
-          // Create the skill pill element
-          const pill = document.createElement("div");
-      
-          // Randomly assign alignment (top, center, bottom)
-          const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
-      
-          // Set the styles for the pill
-          pill.textContent = skill.name;
-          pill.style.display = 'inline-block';
-          pill.style.padding = '10px 20px';
-          pill.style.backgroundColor = '#3498db';
-          pill.style.color = 'white';
-          pill.style.borderRadius = '30px';
-          pill.style.fontSize = '14px';
-          pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
-          pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-          pill.style.alignSelf = randomAlignment;  // Random alignment
-      
-          // Append the pill to the container
-          el.appendChild(pill);
-        });
-      });
+            // Create the skill pill element
+            const pill = document.createElement("div");
 
-      document.querySelectorAll(".frameworks-card").forEach(function (el) {
+            // Randomly assign alignment (top, center, bottom)
+            const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
+
+            // Set the styles for the pill
+            pill.textContent = skill.name;
+            pill.style.display = 'inline-block';
+            pill.style.padding = '10px 20px';
+            pill.style.backgroundColor = '#3498db';
+            pill.style.color = 'white';
+            pill.style.borderRadius = '30px';
+            pill.style.fontSize = '14px';
+            pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+            pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            pill.style.alignSelf = randomAlignment;  // Random alignment
+
+            // Append the pill to the container
+            el.appendChild(pill);
+        });
+    });
+
+    document.querySelectorAll(".frameworks-card").forEach(function (el) {
         // Set the styles for the container (cloud-card)
         el.style.display = 'flex';
         el.style.flexWrap = 'wrap';
@@ -123,32 +138,32 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.padding = '20px';
         el.style.backgroundColor = '#f9bf3f';
         el.style.borderRadius = '10px';
-      
+
         frameworkSkills.forEach(skill => {
-          // Create the skill pill element
-          const pill = document.createElement("div");
-      
-          // Randomly assign alignment (top, center, bottom)
-          const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
-      
-          // Set the styles for the pill
-          pill.textContent = skill.name;
-          pill.style.display = 'inline-block';
-          pill.style.padding = '10px 20px';
-          pill.style.backgroundColor = '#3498db';
-          pill.style.color = 'white';
-          pill.style.borderRadius = '30px';
-          pill.style.fontSize = '14px';
-          pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
-          pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-          pill.style.alignSelf = randomAlignment;  // Random alignment
-      
-          // Append the pill to the container
-          el.appendChild(pill);
-        });
-      });
+            // Create the skill pill element
+            const pill = document.createElement("div");
 
-      document.querySelectorAll(".databases-card").forEach(function (el) {
+            // Randomly assign alignment (top, center, bottom)
+            const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
+
+            // Set the styles for the pill
+            pill.textContent = skill.name;
+            pill.style.display = 'inline-block';
+            pill.style.padding = '10px 20px';
+            pill.style.backgroundColor = '#3498db';
+            pill.style.color = 'white';
+            pill.style.borderRadius = '30px';
+            pill.style.fontSize = '14px';
+            pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+            pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            pill.style.alignSelf = randomAlignment;  // Random alignment
+
+            // Append the pill to the container
+            el.appendChild(pill);
+        });
+    });
+
+    document.querySelectorAll(".databases-card").forEach(function (el) {
         // Set the styles for the container (cloud-card)
         el.style.display = 'flex';
         el.style.flexWrap = 'wrap';
@@ -157,49 +172,49 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.padding = '20px';
         el.style.backgroundColor = '#f9bf3f';
         el.style.borderRadius = '10px';
-      
+
         databasesSkills.forEach(skill => {
-          // Create the skill pill element
-          const pill = document.createElement("div");
-      
-          // Randomly assign alignment (top, center, bottom)
-          const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
-      
-          // Set the styles for the pill
-          pill.textContent = skill.name;
-          pill.style.display = 'inline-block';
-          pill.style.padding = '10px 20px';
-          pill.style.backgroundColor = '#3498db';
-          pill.style.color = 'white';
-          pill.style.borderRadius = '30px';
-          pill.style.fontSize = '14px';
-          pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
-          pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-          pill.style.alignSelf = randomAlignment;  // Random alignment
-      
-          // Append the pill to the container
-          el.appendChild(pill);
+            // Create the skill pill element
+            const pill = document.createElement("div");
+
+            // Randomly assign alignment (top, center, bottom)
+            const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
+
+            // Set the styles for the pill
+            pill.textContent = skill.name;
+            pill.style.display = 'inline-block';
+            pill.style.padding = '10px 20px';
+            pill.style.backgroundColor = '#3498db';
+            pill.style.color = 'white';
+            pill.style.borderRadius = '30px';
+            pill.style.fontSize = '14px';
+            pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+            pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            pill.style.alignSelf = randomAlignment;  // Random alignment
+
+            // Append the pill to the container
+            el.appendChild(pill);
         });
-      });
+    });
 
-//    document.querySelectorAll(".cloud-card").forEach(async function (el) {
-//         // const userId = el.getAttribute("user-id");
+    //    document.querySelectorAll(".cloud-card").forEach(async function (el) {
+    //         // const userId = el.getAttribute("user-id");
 
-//         // const response = await get(`https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`);
-//         // const user = response.items[0];
-//         // const { profile_image, website_url, link, display_name, reputation, user_id } = user;
-//         // const { gold, silver, bronze } = user.badge_counts;
+    //         // const response = await get(`https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`);
+    //         // const user = response.items[0];
+    //         // const { profile_image, website_url, link, display_name, reputation, user_id } = user;
+    //         // const { gold, silver, bronze } = user.badge_counts;
 
-//         el.innerHTML = `
-//         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
-//                 <div style="display: flex; align-items: center;">
-//                     ${cloudSkills.forEach(skill => {
-//                         const skillItem = document.createElement("li");
-//                         skillItem.textContent = skill.name;
-//                     })}
-//                 </div>
-//         `;
-//    });
+    //         el.innerHTML = `
+    //         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
+    //                 <div style="display: flex; align-items: center;">
+    //                     ${cloudSkills.forEach(skill => {
+    //                         const skillItem = document.createElement("li");
+    //                         skillItem.textContent = skill.name;
+    //                     })}
+    //                 </div>
+    //         `;
+    //    });
 
     // document.querySelectorAll(".github-card").forEach(async function (el) {
     //     const username = el.getAttribute("username");
