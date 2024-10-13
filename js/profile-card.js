@@ -1,58 +1,81 @@
+const cloudSkills = [
+    { name: "AWS" },
+    { name: "Azure" },
+    { name: "GCP" },
+    { name: "Kubernetes" },
+    { name: "Docker" },
+    { name: "AWS" },
+    { name: "Azure" },
+    // { name: "React", category: "framework" },
+    // { name: "Angular", category: "framework" },
+    // { name: "SpringBoot", category: "framework" },
+    // { name: "Flask", category: "framework" },
+    // { name: "JavaScript", category: "languages" },
+    // { name: "TypeScript", category: "languages" },
+    // { name: "Java", category: "languages" },
+    // { name: "Python", category: "languages" },
+  ];
+
 window.addEventListener("DOMContentLoaded", async function () {
     async function get(url) {
         const resp = await fetch(url);
         return resp.json();
-    }
+    }   
 
-    document.querySelectorAll(".stack-card").forEach(async function (el) {
-        const userId = el.getAttribute("user-id");
+    const alignments = ['flex-start', 'center', 'flex-end'];
 
-        const response = await get(`https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`);
-        const user = response.items[0];
-        const { profile_image, website_url, link, display_name, reputation, user_id } = user;
-        const { gold, silver, bronze } = user.badge_counts;
+    document.querySelectorAll(".cloud-card").forEach(function (el) {
+        // Set the styles for the container (cloud-card)
+        el.style.display = 'flex';
+        el.style.flexWrap = 'wrap';
+        el.style.justifyContent = 'center';
+        el.style.gap = '10px';
+        el.style.padding = '20px';
+        el.style.backgroundColor = '#f9bf3f';
+        el.style.borderRadius = '10px';
+      
+        cloudSkills.forEach(skill => {
+          // Create the skill pill element
+          const pill = document.createElement("div");
+      
+          // Randomly assign alignment (top, center, bottom)
+          const randomAlignment = alignments[Math.floor(Math.random() * alignments.length)];
+      
+          // Set the styles for the pill
+          pill.textContent = skill.name;
+          pill.style.display = 'inline-block';
+          pill.style.padding = '10px 20px';
+          pill.style.backgroundColor = '#3498db';
+          pill.style.color = 'white';
+          pill.style.borderRadius = '30px';
+          pill.style.fontSize = '14px';
+          pill.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
+          pill.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+          pill.style.alignSelf = randomAlignment;  // Random alignment
+      
+          // Append the pill to the container
+          el.appendChild(pill);
+        });
+      });
 
-        el.innerHTML = `
-        <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
-                <div style="display: flex; align-items: center;">
-                    <img style="width: 48px; height: 48px; border-radius: 50%" src="${profile_image}" alt="Profile image"></img>
-                    <div style="display: flex; flex-direction: column; margin-left: 12px">
-                        <span style="font-weight: 500; color: #black; font-size: 18px">
-                            <a style="text-decoration: none; color: inherit;" target="_blank" href="${website_url && link}">
-                                ${display_name}
-                            </a>
-                        </span>
-                        <span style="font-weight: 400; color: #586069; font-size: 12px">
-                            @${link.replace("https://", '').replace(`/users/${user_id}`,'')}
-                        </span>
-                    </div>
-                </div>
+//    document.querySelectorAll(".cloud-card").forEach(async function (el) {
+//         // const userId = el.getAttribute("user-id");
 
-                <div style="margin-top: 12px; display: flex; justify-content: space-evenly; align-items: center; ">
-                    <div style="margin-top: -4px">
-                        <span style="font-size: 10px; font-weight: 500; color: #586069;">
-                            REPUTATIONS
-                        </span>
-                        <div style="font-weight: 400; color: #211F1F; font-size: 12px; margin-top: 2px">
-                            <span style="font-weight: 600; color: #211F1F; font-size: 32px; line-height: 1;">
-                                ${reputation}
-                            </span>
-                        </div>
-                    </div>
-                    <div style="margin-top: -4px">
-                        <span style="font-size: 10px; font-weight: 500; color: #586069;">
-                            BADGES
-                        </span>
-                        <div style="font-weight: 400; color: #211F1F; font-size: 12px; margin-top: 2px">
-                            <span style="font-weight: 600; color: #211F1F; font-size: 32px; line-height: 1;">
-                                ${Number(gold) + Number(silver) + Number(bronze)}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
+//         // const response = await get(`https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`);
+//         // const user = response.items[0];
+//         // const { profile_image, website_url, link, display_name, reputation, user_id } = user;
+//         // const { gold, silver, bronze } = user.badge_counts;
+
+//         el.innerHTML = `
+//         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
+//                 <div style="display: flex; align-items: center;">
+//                     ${cloudSkills.forEach(skill => {
+//                         const skillItem = document.createElement("li");
+//                         skillItem.textContent = skill.name;
+//                     })}
+//                 </div>
+//         `;
+//    });
 
     document.querySelectorAll(".github-card").forEach(async function (el) {
         const username = el.getAttribute("username");
