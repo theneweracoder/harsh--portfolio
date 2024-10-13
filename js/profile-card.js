@@ -56,21 +56,6 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.backgroundColor = '#f9bf3f';
         el.style.borderRadius = '10px';
 
-        // Create and append the heading (e.g., for Cloud)
-        const heading = document.createElement("h3");
-        heading.textContent = "Cloud";
-        heading.style.position = 'absolute';
-        heading.style.top = '10px';
-        heading.style.left = '10px';
-        heading.style.margin = '0';
-        heading.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif';
-        heading.style.fontSize = '18px';
-        heading.style.color = '#24292e'; // Dark color for contrast
-        el.appendChild(heading);
-
-        // Add padding-top to the container so that skills don't overlap the heading
-        el.style.paddingTop = '40px';
-
         cloudSkills.forEach(skill => {
             // Create the skill pill element
             const pill = document.createElement("div");
