@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         });
     });
 
-    document.querySelectorAll(".langugages-card").forEach(function (el) {
+    document.querySelectorAll(".languages-card").forEach(function (el) {
         // Set the styles for the container (cloud-card)
         el.style.display = 'flex';
         el.style.flexWrap = 'wrap';
