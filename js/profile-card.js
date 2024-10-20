@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.justifyContent = 'center';
         el.style.gap = '10px';
         el.style.padding = '20px';
-        el.style.backgroundColor = '#f9bf3f';
+        el.style.backgroundColor = 'white';
         el.style.borderRadius = '10px';
 
         cloudSkills.forEach(skill => {
@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.justifyContent = 'center';
         el.style.gap = '10px';
         el.style.padding = '20px';
-        el.style.backgroundColor = '#f9bf3f';
+        el.style.backgroundColor = 'white';
         el.style.borderRadius = '10px';
 
         languagesSkills.forEach(skill => {
@@ -121,7 +121,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.justifyContent = 'center';
         el.style.gap = '10px';
         el.style.padding = '20px';
-        el.style.backgroundColor = '#f9bf3f';
+        el.style.backgroundColor = 'white';
         el.style.borderRadius = '10px';
 
         frameworkSkills.forEach(skill => {
@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         el.style.justifyContent = 'center';
         el.style.gap = '10px';
         el.style.padding = '20px';
-        el.style.backgroundColor = '#f9bf3f';
+        el.style.backgroundColor = 'white';
         el.style.borderRadius = '10px';
 
         databasesSkills.forEach(skill => {
@@ -191,7 +191,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     //         // const { gold, silver, bronze } = user.badge_counts;
 
     //         el.innerHTML = `
-    //         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
+    //         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: white;">
     //                 <div style="display: flex; align-items: center;">
     //                     ${cloudSkills.forEach(skill => {
     //                         const skillItem = document.createElement("li");
@@ -208,7 +208,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     //     const { name, avatar_url, public_repos, followers, html_url, following } = response;
 
     //     el.innerHTML = `
-    //         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: #f9bf3f;">
+    //         <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border-radius: 6px; line-height: 1.5; padding: 16px; font-size: 14px; color: #24292e; background-color: white;">
     //             <div style="display: flex; align-items: center; margin-top: -4px">
     //                 <img style="width: 48px; height: 48px; border-radius: 50%" src="${avatar_url}" alt="Profile image"></img>
     //                 <div style="display: flex; flex-direction: column; margin-left: 12px">
