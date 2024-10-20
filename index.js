@@ -142,77 +142,89 @@ import { URLs } from './user-data/urls.js';
    * @returns {void}
    */
   
+
   function populateProjects(items, id) {
     let projectdesign = document.getElementById(id);
-  
-    let h4 = document.createElement("h4");
-    h4.className = "project-heading";
-  
-    let a = document.createElement("a");
-    a.target = "_blank";
-  
-    let img = document.createElement("img");
-    img.className = "img-fluid";
-  
-    let divResumeContentLeft = document.createElement("div");
-    divResumeContentLeft.className = "resume-content";
-    divResumeContentLeft.id = "left-div";
-    divResumeContentLeft.append(img);
-  
-    let divResumeContentRight = document.createElement("div");
-    divResumeContentRight.className = "resume-content";
-    divResumeContentRight.id = "right-div";
-  
-    let p = document.createElement("p");
-    p.className = "project-description";
-  
-    let divSpan = document.createElement("div");
-  
-    let divSubHeading = document.createElement("div");
-    divSubHeading.className = "sub-heading";
-    divSubHeading.append(p);
-    divSubHeading.append(divSpan);
-    divResumeContentRight.append(divSubHeading);
-  
-    let divResumeItem = document.createElement("div");
-    divResumeItem.className = "resume-item";
-    divResumeItem.append(divResumeContentLeft);
-    divResumeItem.append(divResumeContentRight);
-    a.append(divResumeItem);
-  
-    let divProjectCard = document.createElement("div");
-    divProjectCard.className = "project-card";
-    divProjectCard.append(a);
-  
-    let li = document.createElement("li");
-    li.append(divProjectCard);
-  
-    let hr = document.createElement("hr");
+    console.log("populate");
+    console.log(items);
   
     for (let i = 0; i < items.length; i++) {
-      h4.innerHTML = items[i].projectName;
-      a.href = items[i].preview;
+      // Create a new h4 for each project
+      let h4 = document.createElement("h4");
+      h4.className = "project-heading";
+      h4.innerHTML = items[i].projectName;  // Set the project name
   
-      img.src = items[i].image;
+      // Create a new anchor element for each project
+      let a = document.createElement("a");
+      a.target = "_blank";
+      a.href = items[i].preview;  // Set the project preview URL
   
-      p.innerHTML = items[i].summary;
+      // Create a new image for each project
+      let img = document.createElement("img");
+      img.className = "img-fluid";
+      img.src = items[i].image;  // Set the project image
   
-      divSpan.innerHTML = "";
+      // Create left and right content divs
+      let divResumeContentLeft = document.createElement("div");
+      divResumeContentLeft.className = "resume-content";
+      divResumeContentLeft.id = "left-div";
+      divResumeContentLeft.append(img);  // Append image to left content
+  
+      let divResumeContentRight = document.createElement("div");
+      divResumeContentRight.className = "resume-content";
+      divResumeContentRight.id = "right-div";
+  
+      // Create project description
+      let p = document.createElement("p");
+      p.className = "project-description";
+      p.innerHTML = items[i].summary;  // Set the project summary
+  
+      // Create div for badges (tech stack)
+      let divSpan = document.createElement("div");
       for (let k = 0; k < items[i].techStack.length; k++) {
         let span = document.createElement("span");
         span.className = "badge badge-secondary";
-        span.innerHTML = items[i].techStack[k];
+        span.innerHTML = items[i].techStack[k];  // Set each tech stack badge
         divSpan.append(span);
       }
   
-      projectdesign.append(li.cloneNode(true));
+      // Create subheading div
+      let divSubHeading = document.createElement("div");
+      divSubHeading.className = "sub-heading";
+      divSubHeading.append(p);  // Append project description
+      divSubHeading.append(divSpan);  // Append tech stack badges
+      divResumeContentRight.append(divSubHeading);  // Append subheading to right content
   
+      // Create resume item div and append left and right content
+      let divResumeItem = document.createElement("div");
+      divResumeItem.className = "resume-item";
+      divResumeItem.append(divResumeContentLeft);
+      divResumeItem.append(divResumeContentRight);
+  
+      // Append resume item to anchor
+      a.append(divResumeItem);
+  
+      // Create project card div
+      let divProjectCard = document.createElement("div");
+      divProjectCard.className = "project-card";
+      divProjectCard.append(a);
+  
+      // Create list item and append project card
+      let li = document.createElement("li");
+      li.append(divProjectCard);
+  
+      // Append list item to the main project container
+      projectdesign.append(li);
+  
+      // Append an hr tag for separation between projects, if not the last project
       if (i != items.length - 1) {
-        projectdesign.append(hr.cloneNode(true));
+        let hr = document.createElement("hr");
+        projectdesign.append(hr);
       }
     }
   }
   
+
   /**
    * Creates and populates a list of blog posts with specified properties
    *
