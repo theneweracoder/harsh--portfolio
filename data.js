@@ -282,6 +282,14 @@ export const footer = [
         text: "Linkedin",
         link: "https://www.linkedin.com/in/hv301099/",
       },
+      {
+        text: "Email",
+        link: "mailto:hv@andrew.cmu.edu"
+      },
+      {
+        text: "Resume",
+        link: "https://drive.google.com/file/d/10sgH00YP9okiIAVuQjj8OiobIiwJsgFB/view?usp=sharing"
+      }
       // {
       //   text: "Twitter",
       //   link: "https://twitter.com/thesigmakid",
