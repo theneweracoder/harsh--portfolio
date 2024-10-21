@@ -52,37 +52,37 @@ export const skills = [
 export const projects = {
   webProjects: [
     {
-      projectName: "Programming Diaries",
+      projectName: "Nano Blogging Website",
       image: "images/programmingdiaries.png",
       summary:
         "Developed a full stack blog application to provide content on techical topics across the internet with admin interface.",
       preview: "https://programmingdiaries.herokuapp.com/",
-      techStack: ["Django", "SQLite", "Bootstrap", "JavaScript", "Heroku"],
-    },
-    {
-      projectName: "Find Your Bank",
-      image: "images/findyourbank.png",
-      summary:
-        "Developed a React application to render a list of banks fetched from API. Filtered the banks based on queries from localstorage, marked favorites banks.",
-      preview: "https://clever-fermi-0d5d76.netlify.app",
-      techStack: ["Reactjs", "Bootstrap", "JavaScript", "Netlify"],
-    },
-    {
-      projectName: "Web Portfolio",
-      image: "images/portfolio.png",
-      summary:
-        "Web Portfolio to showcase acadmics, skills, projects and contact details in better manner.",
-      preview: "https://github.com/vinaysomawat/Travographer-Portal",
-      techStack: ["HTML", "Bootstrap", "JavaScript"],
-    },
-    {
-      projectName: "Resume Builder",
-      image: "images/resume-builder.png",
-      summary:
-        "Browser based editor to build and download Resumes in a customizable templates.",
-      preview: "https://vinaysomawat.github.io/Resume-Builder",
-      techStack: ["HTML", "Bootstrap", "JavaScript"],
-    },
+      techStack: ["Django", "SQLite", "Python", "JavaScript", "Heroku"],
+     }
+    // {
+    //   projectName: "Find Your Bank",
+    //   image: "images/findyourbank.png",
+    //   summary:
+    //     "Developed a React application to render a list of banks fetched from API. Filtered the banks based on queries from localstorage, marked favorites banks.",
+    //   preview: "https://clever-fermi-0d5d76.netlify.app",
+    //   techStack: ["Reactjs", "Bootstrap", "JavaScript", "Netlify"],
+    // },
+    // {
+    //   projectName: "Web Portfolio",
+    //   image: "images/portfolio.png",
+    //   summary:
+    //     "Web Portfolio to showcase acadmics, skills, projects and contact details in better manner.",
+    //   preview: "https://github.com/vinaysomawat/Travographer-Portal",
+    //   techStack: ["HTML", "Bootstrap", "JavaScript"],
+    // },
+    // {
+    //   projectName: "Resume Builder",
+    //   image: "images/resume-builder.png",
+    //   summary:
+    //     "Browser based editor to build and download Resumes in a customizable templates.",
+    //   preview: "https://vinaysomawat.github.io/Resume-Builder",
+    //   techStack: ["HTML", "Bootstrap", "JavaScript"],
+    // },
   ],
   softwareProjects: [
     {
@@ -128,7 +128,7 @@ export const projects = {
       techStack: ["JAVA", "XML", "Android"],
     },
   ],
-  freelanceProjects: [
+  cloudProjects: [
     {
       projectName: "SnylloAir.com",
       image: "images/snylloair.png",
@@ -218,91 +218,89 @@ export const experience = [
 
 export const education = [
   {
-    title: "B.Tech. in Computer Science and Engineering",
-    duration: "2016 - 2020",
-    subtitle: "National Institute of Technology, Warangal",
+    title: "M.S in Information Systems",
+    duration: "2023 - Present",
+    subtitle: "Carnegie Mellon University, Pittsburgh",
     details: [],
     tags: [
-      "Data Structures & Algorithms",
-      "Operating Systems",
-      "Database Management System",
-      "Computer Networks",
-      "Compiler Designing",
+      "Object Oriented Programming in Java",
       "Cloud Computing",
+      "Relational Database Management System",
+      "Devops (CI/CD)",
+      "Web Application Development",
+      "NoSQL Databases",
+      "Blockchain Fundamentals",
+      "Digital Transformation",
     ],
     icon: "graduation-cap",
   },
   {
-    title: "Class 12th in Science and Mathematics",
-    duration: "",
-    subtitle: "Board of Secondary Education, Rajasthan",
+    title: "B.Tech. in Engineering",
+    duration: "2017-2021",
+    subtitle: "National Institute of Technology, Tiruchirappalli",
     details: [],
-    tags: ["Physics", "Chemistry", "Mathematics"],
-    icon: "book",
+    tags: ["Data Analytics", "Introduction to C/C++", "Product Development Strategies"],
+    icon: "graduation-cap",
   },
 ];
 
 export const footer = [
-//   {
-//     label: "Dev Profiles",
-//     data: [
-//       {
-//         text: "Stackoverflow",
-//         link: "https://stackoverflow.com/users/8461233/vinay-somawat",
-//       },
-//       {
-//         text: "GitHub",
-//         link: "https://github.com/vinaysomawat",
-//       },
-//       {
-//         text: "LeetCode",
-//         link: "https://leetcode.com/somawatvinay/",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Resources",
-//     data: [
-//       {
-//         text: "Enable Dark/Light Mode",
-//         func: "enableDarkMode()",
-//       },
-//       {
-//         text: "Print this page",
-//         func: "window.print()",
-//       },
-//       {
-//         text: "Clone this page",
-//         link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-//       },
-//     ],
-//   },
+  {
+    label: "Dev Profiles",
+    data: [
+      {
+        text: "GitHub",
+        link: "https://github.com/theneweracoder",
+      },
+      {
+        text: "LeetCode",
+        link: "https://leetcode.com/somawatvinay/",
+      },
+    ],
+  },
+  // {
+  //   label: "Resources",
+  //   data: [
+  //     {
+  //       text: "Enable Dark/Light Mode",
+  //       func: "enableDarkMode()",
+  //     },
+  //     {
+  //       text: "Print this page",
+  //       func: "window.print()",
+  //     },
+  //     {
+  //       text: "Clone this page",
+  //       link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+  //     },
+  //   ],
+  // },
   {
     label: "Links",
     data: [
-    //   {
-    //     text: "Linkedin",
-    //     link: "https://www.linkedin.com/in/vinaysomawat/",
-    //   },
-    //   {
-    //     text: "Twitter",
-    //     link: "https://twitter.com/thesigmakid",
-    //   },
       {
-        text: "Buy me a coffee",
-        link: "https://www.buymeacoffee.com/r194dME8y",
+        text: "Linkedin",
+        link: "https://www.linkedin.com/in/hv301099/",
       },
-      {
-        text: "Github/vinaysomawat.github.io",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-      },
+      // {
+      //   text: "Twitter",
+      //   link: "https://twitter.com/thesigmakid",
+      // },
+      // {
+      //   text: "Buy me a coffee",
+      //   link: "https://www.buymeacoffee.com/r194dME8y",
+      // },
+      // {
+      //   text: "Github/vinaysomawat.github.io",
+      //   link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+      // },
     ],
-  },
-  {
-    label: "copyright-text",
-    data: [
-      "Made with &hearts; by Vinay Somawat.",
-      "&copy; No Copyrights. Feel free to use this template.",
-    ],
-  },
+  }
+  // {
+  //   label: "copyright-text",
+  //   data: [
+  //     "Made with &hearts; by Vinay Somawat.",
+  //     "&copy; No Copyrights. Feel free to use this template.",
+  //   ],
+  // },
 ];
