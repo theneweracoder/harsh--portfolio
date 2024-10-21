@@ -150,70 +150,47 @@ export const projects = {
 
 export const experience = [
   {
-    title: "Shiprocket (Bigfoot Solution Private Limited)",
-    duration: "September 2022 - Present",
-    subtitle: "Software Engineer",
-    details: ["Working in support and escalation team."],
-    tags: ["JavaScript", "Angular", "Bootstrap", "Nodejs", "Jenkins"],
-    icon: "truck ",
+    title: "Carnegie Mellon University",
+    duration: "Oct 2022 - Present",
+    subtitle: "Cloud Computing Research Intern",
+    details: ["Developed a multithreaded Load Generation plan using Apache JMeter (Groovy) and Wrk for microservices in a leader-follower cluster, profiling performance to benchmark RPS, latency, and error rates.","Managed cloud infrastructure testing for Java, Go, Python, Rust and C++ frameworks across two instance families in a Kubernetes cluster, benchmarking performance metrics for over 500+ users.", "Utilized Python3, Flask, JSON, and the OpenAI API (LLM) to automate batch processing of 200+ code files using a data pipeline in DVC, reducing 10 hours of manual work and achieving 80% efficiency.", "Automated bash scripting within a Linux VM (Ubuntu) to streamline deployment and testing processes by 50%.", "Migrated from Azure ML Studio Classic to the new Azure ML Studio, rebuilding models in an AKS cluster, improving accessibility by 30%."],
+    tags: ["Kubernetes", "Docker", "AWS EC2", "AWS RDS", "Apache Jmeter", "Python", "DVC (Data Version Control)", "OpenAI GPT-4o-preview", "Bash Scripting", "Azure ML Studio"],
+    icon: "cloud",
   },
   {
-    title: "Biofourmis India Private Limited",
-    duration: "April 2022 - Jul 2023",
-    subtitle: "Software Engineer",
+    title: "Standard Chartered Bank",
+    duration: "July 2021 - Apr 2023",
+    subtitle: "Full Stack Software Engineer",
     details: [
-      `Implemented microfrontends using the Module Federation Plugin in Angular.
-            Rendered components from remote modules/repositories, enabling a modular and scalable architecture`,
-      `Upgraded application with a dynamic base URL for flexible operation across multiple regions and verticals, leading to
-            recognition with the Biofourmis Bravo award in Q1, 2023.`,
-      `Implemented RxState for managing local state in components, resulting in elegant and reactive facades.`,
-      `Utilized Twilio-Video for group video call rooms and Countly for Web Analytics.`,
-      `Integrated NGXS WebSocket, enhancing state management and replacing legacy service injections.`,
-      `Implemented extensive RxJS usage for reactive programming, resulting in efficient data handling, improved state
-            management, and enhanced application performance.`,
-      `Dramatically optimized load time and performance through code splitting, lazy loading, caching, and preload`,
-      `Enhanced video call experience by implementing real-time switching of I/O devices and audio level indicators,
-            resulting in reduced audio issues and increased user satisfaction.`,
-      `Owned and led successful Angular application upgrades from version 12 to 13 and 14, improving performance
-            and enhancing features.`,
+      "Optimized transactional services, reducing average database (Postgres) load and latency by 10%, and improved Java Database Connection (JDBC) code to accelerate execution time by 2x.",
+      "Refactored client-server code, utilizing Apache Log4j for bug fixing, EJB/Java EE (MVC) in backend, and DAO with Hibernate for data access, while migrating the frontend from JSP (JavaServer Pages) to React.js.",
+      "Implemented unit tests (JUnit) with SonarQube and integration tests using Jenkins pipeline for code reviews, ensuring code quality >80% throughout the Software Development Life Cycle (SDLC)."
     ],
     tags: [
-      "JavaScript",
-      "Angular",
-      "RxJS",
-      "NGXS",
+      "React.js",
+      "HTML",
+      "Java (EJB)",
+      "Hibernate",
       "TypeScript",
-      "RxState",
-      "Webpack",
-      "Optimization",
+      "Internal Bootstrap",
+      "Jenkins",
+      "Sonarqube",
+      "Control-M",
+      "Bash Scripting",
+      "JIRA"
     ],
-    icon: "heartbeat",
+    icon: "finance",
   },
   {
-    title: "Novopay Solutions Private Limited",
-    duration: "June 2020 - April 2022",
-    subtitle: "Software Engineer",
+    title: "Navriti Technologies",
+    duration: "Sep 2020 - Mar 2021",
+    subtitle: "Frontend Intern",
     details: [
-      `Implemented AePS Services, including Bio-metric eKYC, Cash Withdrawal, Balance Enquiry, Mini-Statements,
-            and Money transfer.`,
-      `Implemented QR Code integration for retailer wallet money loading, Clevertap events for user action tracking,
-            Freshdesk ticketing, Chatbot services, and Retailer onboarding/admin interfaces.`,
-      `Developed retailer QR code system for seamless money loading into wallets, resulting in improved user transactions.`,
-      `Achieved 70 percent code coverage of the entire application by writing unit tests for legacy code.`,
+
     ],
-    tags: ["JavaScript", "Angular", "Bootstrap", "Nodejs", "Jenkins"],
+    tags: ["Java", "IonicJS", "Bootstrap3", "ExpressJS", "Figma", "cURL"],
     icon: "qrcode",
-  },
-  {
-    title: "ThinkPedia LLP",
-    duration: "May 2019 - June 2019",
-    subtitle: "SDE Intern",
-    details: [
-      `Developed a customer web application for social media management, supporting the advertisement domain.`,
-    ],
-    tags: ["JavaScript", "Angular", "Bootstrap", "Java", "Spring Boot"],
-    icon: "group",
-  },
+  }
 ];
 
 export const education = [
